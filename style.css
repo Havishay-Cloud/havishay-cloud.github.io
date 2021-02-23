@@ -1,4 +1,4 @@
-    .holder {
+ .holder {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -17,10 +17,10 @@
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  animation: rotatePreloader 2s infinite ease-in;
+  animation: rotateLoader 2s infinite ease-in;
 }
 
-@keyframes rotatePreloader {
+@keyframes rotateLoader {
   0% {
     transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
   }
