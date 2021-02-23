@@ -9,7 +9,7 @@
   background-color: black;
 }
 
-.preloader {
+.loader {
   /* size */
   width: 100px;
   height: 100px;
@@ -35,7 +35,7 @@
   opacity: 0;
 }
 
-.preloader div:before {
+.loader div:before {
   content: "";
   position: absolute;
   left: 50%;
@@ -47,7 +47,7 @@
   border-radius: 50%;
 }
 
-.preloader div:nth-child(1) {
+.loader div:nth-child(1) {
   transform: rotateZ(0deg);
   animation: rotateCircle1 2s infinite linear;
   z-index: 9;
@@ -72,7 +72,7 @@
     opacity: 1;
   }
 }
-.preloader div:nth-child(2) {
+.loader div:nth-child(2) {
   transform: rotateZ(36deg);
   animation: rotateCircle2 2s infinite linear;
   z-index: 8;
@@ -97,7 +97,7 @@
     opacity: 1;
   }
 }
-.preloader div:nth-child(3) {
+.loader div:nth-child(3) {
   transform: rotateZ(72deg);
   animation: rotateCircle3 2s infinite linear;
   z-index: 7;
@@ -122,7 +122,7 @@
     opacity: 1;
   }
 }
-.preloader div:nth-child(4) {
+.loader div:nth-child(4) {
   transform: rotateZ(108deg);
   animation: rotateCircle4 2s infinite linear;
   z-index: 6;
@@ -147,7 +147,7 @@
     opacity: 1;
   }
 }
-.preloader div:nth-child(5) {
+.loader div:nth-child(5) {
   transform: rotateZ(144deg);
   animation: rotateCircle5 2s infinite linear;
   z-index: 5;
@@ -172,7 +172,7 @@
     opacity: 1;
   }
 }
-.preloader div:nth-child(6) {
+.loader div:nth-child(6) {
   transform: rotateZ(180deg);
   animation: rotateCircle6 2s infinite linear;
   z-index: 4;
@@ -197,7 +197,7 @@
     opacity: 1;
   }
 }
-.preloader div:nth-child(7) {
+.loader div:nth-child(7) {
   transform: rotateZ(216deg);
   animation: rotateCircle7 2s infinite linear;
   z-index: 3;
@@ -222,7 +222,7 @@
     opacity: 1;
   }
 }
-.preloader div:nth-child(8) {
+.loader div:nth-child(8) {
   transform: rotateZ(252deg);
   animation: rotateCircle8 2s infinite linear;
   z-index: 2;
@@ -247,7 +247,7 @@
     opacity: 1;
   }
 }
-.preloader div:nth-child(9) {
+.loader div:nth-child(9) {
   transform: rotateZ(288deg);
   animation: rotateCircle9 2s infinite linear;
   z-index: 1;
@@ -272,7 +272,7 @@
     opacity: 1;
   }
 }
-.preloader div:nth-child(10) {
+.loader div:nth-child(10) {
   transform: rotateZ(324deg);
   animation: rotateCircle10 2s infinite linear;
   z-index: 0;
