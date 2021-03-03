@@ -19,25 +19,60 @@
     <style>
     </head>
   <body>
-  <div class="header">
+      <div class="header">
      <h1>Upload Your Files</h1>
    </div>
    <p id="mainpara">Upload your files, Without any cost, safe and secure for lifetime... View An Example <a href="https://havishay-cloud-users-uploaded-cdn-server12.s3.ap.cloud-object-storage.appdomain.cloud/sample-video-from-cdn-12.mp4">Here</a></p>   
-  
-<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
-<script>
-  var firebaseConfig = {
-    apiKey: "AIzaSyAQP3LepTFSgBhm0YXD5eH-Z9fnIPEQB9s",
-    authDomain: "uploadsfromsite.firebaseapp.com",
-    projectId: "uploadsfromsite",
-    storageBucket: "uploadsfromsite.appspot.com",
-    messagingSenderId: "967966406196",
-    appId: "1:967966406196:web:f942c875bd8d59c69dfc61",
-    measurementId: "G-2F2RC5H250"
-  };
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
   </body>
+      <div class="container">
+      <div class="wrapper">
+        <div class="image">
+          <img src="" alt="">
+        </div>
+<div class="content">
+          <div class="icon">
+<i class="fas fa-cloud-upload-alt"></i></div>
+<div class="text">
+No file chosen, yet!</div>
+</div>
+<div id="cancel-btn">
+<i class="fas fa-times"></i></div>
+<div class="file-name">
+File name here</div>
+</div>
+<button onclick="defaultBtnActive()" id="custom-btn">Choose a file</button>
+      <input id="default-btn" type="file" hidden>
+    </div>
+<script>
+      const wrapper = document.querySelector(".wrapper");
+      const fileName = document.querySelector(".file-name");
+      const defaultBtn = document.querySelector("#default-btn");
+      const customBtn = document.querySelector("#custom-btn");
+      const cancelBtn = document.querySelector("#cancel-btn i");
+      const img = document.querySelector("img");
+      let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+      function defaultBtnActive(){
+        defaultBtn.click();
+      }
+      defaultBtn.addEventListener("change", function(){
+        const file = this.files[0];
+        if(file){
+          const reader = new FileReader();
+          reader.onload = function(){
+            const result = reader.result;
+            img.src = result;
+            wrapper.classList.add("active");
+          }
+          cancelBtn.addEventListener("click", function(){
+            img.src = "";
+            wrapper.classList.remove("active");
+          })
+          reader.readAsDataURL(file);
+        }
+        if(this.value){
+          let valueStore = this.value.match(regExp);
+          fileName.textContent = valueStore;
+        }
+      });
+    </script>
 </html>
