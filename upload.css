@@ -17,7 +17,7 @@ body{
   background-color: black;
   text-align: center;
 }
-#upload-btn{
+#upload{
  background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
  font-family: Open Sans;
  font-size: 11px; 
